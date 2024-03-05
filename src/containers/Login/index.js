@@ -22,7 +22,7 @@ import {
 
 export function Login() {
   const history = useHistory()
-  const { putUserData, userData } = useUser()
+  const { putUserData } = useUser()
 
   const schema = Yup.object().shape({
     email: Yup.string()

@@ -1,13 +1,13 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import React from 'react'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { Link, useHistory } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import * as Yup from 'yup'
 
 import LoginImg from '../../assets/logi-image.svg'
 import Logo from '../../assets/logo.svg'
-import Button from '../../components/Button'
+import { Button } from '../../components'
 import { useUser } from '../../hooks/UserContext'
 import api from '../../services/api'
 import {
@@ -20,7 +20,7 @@ import {
   ErrorMessage
 } from './styles'
 
-function Login() {
+export function Login() {
   const history = useHistory()
   const { putUserData, userData } = useUser()
 
@@ -66,21 +66,6 @@ function Login() {
     }
   }
 
-  // console.log(errors)
-  // const schema = Yup.object().shape({
-  //   email: Yup.string().email.required(),
-  //   password: Yup.string().required()
-  // })
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors }
-  // } = useForm({
-  //   resolver: yupResolver(schema)
-  // })
-
-  //  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
-
   return (
     <Container>
       <LoginImage src={LoginImg} alt="login-image" />
@@ -117,5 +102,3 @@ function Login() {
     </Container>
   )
 }
-
-export default Login

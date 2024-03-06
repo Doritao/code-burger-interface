@@ -22,7 +22,11 @@ export function CartItems() {
             <img src={product.url} />
             <p>{product.name}</p>
             <p>{formatCurrency(product.price)}</p>
-            <p>{product.quantity}</p>
+            <div className="quantityContainer">
+              <button>-</button>
+              <p>{product.quantity}</p>
+              <button>+</button>
+            </div>
             <p>{formatCurrency(product.quantity * product.price)}</p>
           </Body>
         ))

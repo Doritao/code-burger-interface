@@ -8,3 +8,10 @@ export const Container = styled.div`
 export const CartImg = styled.img`
   width: 100%;
 `
+
+export const Wrapper = styled.div`
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-evenly;
+  padding-bottom: 30px;
+`

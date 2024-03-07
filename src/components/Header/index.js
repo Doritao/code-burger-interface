@@ -14,7 +14,7 @@ import {
   PageLinkLogOut
 } from './styles'
 export function Header() {
-  const { logOut } = useUser()
+  const { logOut, userData } = useUser()
   const {
     push,
     location: { pathname }
@@ -24,7 +24,6 @@ export function Header() {
     logOut()
     push('/login')
   }
-
   return (
     <Container>
       <ContainerLeft>
@@ -49,7 +48,7 @@ export function Header() {
           <img src={Person} alt="loog-da-pessoa" />
         </PageLink>
         <ContainerText>
-          <p>Ola mundo!</p>
+          <p>Olá {userData.name}</p>
           <PageLinkLogOut onClick={logoutUser}>Sair</PageLinkLogOut>
         </ContainerText>
       </ContainerRight>

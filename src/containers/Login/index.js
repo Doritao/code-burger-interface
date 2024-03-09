@@ -57,9 +57,13 @@ export function Login() {
       )
 
       putUserData(data)
-
       setTimeout(function () {
-        history.push('/')
+        if (data.admin) {
+          history.push('/pedidos')
+          console.log(`admin logado teste`)
+        } else {
+          history.push('/')
+        }
       }, 1000)
     } catch (error) {
       console.log(error)

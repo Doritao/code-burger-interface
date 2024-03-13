@@ -25,7 +25,7 @@ export function CartResume() {
     })
 
     await toast
-      .promise(api.post('ordders', { products: order }), {
+      .promise(api.post('orders', { products: order }), {
         pending: 'Realizando seu pedido...',
         success: 'Pedido realizado com sucesso!',
         error: 'Falha tentar ao realizar seu pedido, tente novamente'

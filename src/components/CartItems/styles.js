@@ -28,12 +28,12 @@ export const Body = styled.div`
 
   img {
     border-radius: 10px;
-    width: 120px;
+    width: 150px;
   }
 
   p {
     font-size: 16px;
-    color: #00000;
+    color: #000000;
   }
 
   .quantityContainer {
